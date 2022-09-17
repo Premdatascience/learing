@@ -12,6 +12,7 @@ import BasicuseEffect from "./learing/BasicuseEffect";
 import Formview from "./Crud/Formview";
 import Formedit from "./Crud/Formedit";
 import Fileupload from "./fileupload/Fileupload";
+import ViewFileuploads from "./fileupload/ViewFileupload";
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
 {/*  //Fileupload */}
 
         <Route path="/fileupload" element ={<Fileupload />}/>
+        <Route path="/addupload" element ={<Fileupload />}/> 
+        <Route path="/viewfileupload" element ={<ViewFileuploads />}/>
         
       </Routes>
     </Router>

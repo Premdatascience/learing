@@ -1,47 +1,55 @@
 import React from 'react';
-import  { useState } from 'react';
+import { useState } from 'react';
 import axios from "axios";
+import { useNavigate} from "react-router-dom";
+import ViewFileuploads from './ViewFileupload';
 
 
- 
+
 const Fileupload = () => {
 
 
     const [newUser, setNewUser] = useState(
         {
-            name: '',
-            birthdate: '',
             photo: '',
+            name: '',
+
+
+            birthdate: '',
         }
     );
 
-  const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
+
         formData.append('photo', newUser.photo);
-        formData.append('birthdate', newUser.birthdate);
         formData.append('name', newUser.name);
 
+        formData.append('birthdate', newUser.birthdate);
+
         axios.post('http://localhost:4000/fileupload', formData)
-             .then(res => {
+            .then(res => {
                 console.log(res);
-             })
-             .catch(err => {
+                window.location.href = "/viewfileupload";
+            })
+            .catch(err => {
                 console.log(err);
-             });
+                // navigate("/ViewFileuploads.JS");
+            });
     }
 
-   
+
     const handlePhoto = (e) => {
-        setNewUser({...newUser, photo: e.target.files[0]});
+        setNewUser({ ...newUser, photo: e.target.files[0] });
     }
 
     const handleChange = (e) => {
-        setNewUser({...newUser, [e.target.name]: e.target.value});
+        setNewUser({ ...newUser, [e.target.name]: e.target.value });
     }
 
     const handleDate = (e) => {
-        setNewUser({...newUser, [e.target.date]: e.target.value});
+        setNewUser({ ...newUser, [e.target.date]: e.target.value });
     }
 
 
@@ -63,7 +71,7 @@ const Fileupload = () => {
                                             type="file"
                                             accept=".png, .jpg, .jpeg"
                                             name="photo"
-                                        onChange={handlePhoto}
+                                            onChange={handlePhoto}
                                         />
 
                                     </div>
@@ -73,8 +81,8 @@ const Fileupload = () => {
                                             type="text"
                                             placeholder="name"
                                             name="name"
-                                        value={newUser.name}
-                                        onChange={handleChange}
+                                            value={newUser.name}
+                                            onChange={handleChange}
                                         />
 
                                     </div>
@@ -83,16 +91,13 @@ const Fileupload = () => {
                                         <input
                                             type="date"
                                             name="birthdate"
-                                        value={newUser.date}
-                                        onChange={handleDate}
+                                            value={newUser.date}
+                                            onChange={handleDate}
                                         />
 
                                     </div>
                                     <button type="submit" className="btn btn-primary">Submit </button>
                                 </form>
-
-
-
 
 
                             </div>
