@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 
 import { CSVLink } from "react-csv";
+import Home from "../Home";
 
 
 const ViewFileuploads = (props) => {
@@ -32,6 +33,7 @@ const ViewFileuploads = (props) => {
 
   return (
     <>
+    <Home />
       <div className="container-fluid mt-5">
         <div className="row">
           <div class="col-md-3 offset-md-3">

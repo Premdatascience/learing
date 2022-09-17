@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { XLSX } from "xlsx";
 import { CSVLink } from "react-csv";
 import $ from "jquery";
+import Home from "../Home";
 
 const Formview = (props) => {
   const [data, setData] = useState([]);
@@ -71,20 +72,11 @@ const Formview = (props) => {
 
   return (
     <>
+    <Home />
       <div className="container-fluid mt-5">
         <div className="row">
           <div class="col-md-3 offset-md-3">
-            <form enctype="multipart/form-data" action="/uploadfile" method="post">
-              <div class="mb-3">
-                <label for="formFile" class="form-label"></label>
-                <input class="form-control" type="file" name="uploadfile" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="formFile" />
-              </div>
-              <div class="mt-3">
-                <button type="submit" class="btn btn-primary" value="Upload Excel">
-                  import
-                </button>
-              </div>
-            </form>
+        
           </div>
           <div class="col-md-3 offset-md-3 mt-3">
             <CSVLink data={data} type="button" className="btn btn-warning">

@@ -13,11 +13,19 @@ import Formview from "./Crud/Formview";
 import Formedit from "./Crud/Formedit";
 import Fileupload from "./fileupload/Fileupload";
 import ViewFileuploads from "./fileupload/ViewFileupload";
+import Home from "./Home";
 
 function App() {
   return (
     <Router>
       <Routes>
+
+        {/* Home */}
+<Route path="/" element={<Home />}/>
+<Route path="/viewform" element={<Formview />}/>
+<Route path="/viewfileupload" element={<ViewFileuploads />}/>
+
+        {/* basic */}
         <Route path="/testform" element={<Formtest />} />
         <Route path="/basic" element={<Employee />} />
         <Route path="/handelclick" element={<HandleclickCC />} />
