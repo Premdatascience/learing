@@ -16,7 +16,7 @@ const Home = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#"> <Link to="/" >
+          <a className="nav-link active" aria-current="page" href="#"> <Link to="/home" >
           Home
                   </Link></a>
         </li>
@@ -50,6 +50,9 @@ const Home = () => {
     </div>
   </div>
 </nav>
+<div className='container'>
+<h1>Welcome to Homepage which is only visible when you are logged in </h1>
+</div>
     </div>
     </>
   )

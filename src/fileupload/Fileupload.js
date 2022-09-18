@@ -35,8 +35,9 @@ const Fileupload = () => {
             })
             .catch(err => {
                 console.log(err);
-                // navigate("/ViewFileuploads.JS");
+                
             });
+        // console.log(formData);
     }
 
 
@@ -48,9 +49,9 @@ const Fileupload = () => {
         setNewUser({ ...newUser, [e.target.name]: e.target.value });
     }
 
-    const handleDate = (e) => {
-        setNewUser({ ...newUser, [e.target.date]: e.target.value });
-    }
+    // const handleDate = (e) => {
+    //     setNewUser({ ...newUser, [e.target.date]: e.target.value });
+    // }
 
 
     return (
@@ -92,7 +93,7 @@ const Fileupload = () => {
                                             type="date"
                                             name="birthdate"
                                             value={newUser.date}
-                                            onChange={handleDate}
+                                            onChange={handleChange}
                                         />
 
                                     </div>
