@@ -16,7 +16,7 @@ const Home = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#"> <Link to="/home" >
+          <a className="nav-link active" aria-current="page" href="#"> <Link to="/homepage" >
           Home
                   </Link></a>
         </li>
@@ -43,16 +43,11 @@ const Home = () => {
         </li>
      
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <a className="nav-link" href="#"> Logout</a>
     </div>
   </div>
 </nav>
-<div className='container'>
-<h1>Welcome to Homepage which is only visible when you are logged in </h1>
-</div>
+
     </div>
     </>
   )

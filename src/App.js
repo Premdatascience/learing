@@ -21,12 +21,14 @@ import Fileupload from "./fileupload/Fileupload";
 import ViewFileuploads from "./fileupload/ViewFileupload";
 import Home from "./Home";
 
+
 // login&Register
 import Register from "./registration&login/Register";
 import Login from "./registration&login/Login";
 import { useState } from "react";
 
 import loginregRoute from "./registration&login/loginregRoute";
+import HomePage from "./HomePage";
 
 function App() {
   // login&Register
@@ -35,7 +37,7 @@ function App() {
   return (
     <Router>
       <Routes>
-
+        
         {/* registration&login */}
 {/* 
         <Switch>
@@ -52,6 +54,7 @@ function App() {
         </Switch> */}
 
         {/* Home */}
+        <Route path="/homepage" element={<HomePage />}/>
         <Route path="/home" element={<Home />} />
         <Route path="/viewform" element={<Formview />} />
         <Route path="/viewfileupload" element={<ViewFileuploads />} />
