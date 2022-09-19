@@ -23,7 +23,7 @@ const Fileupload = () => {
         e.preventDefault();
         const formData = new FormData();
 
-        formData.append('photo', newUser.photo);
+        formData.append('file', newUser.photo);
         formData.append('name', newUser.name);
 
         formData.append('birthdate', newUser.birthdate);
@@ -31,7 +31,7 @@ const Fileupload = () => {
         axios.post('http://localhost:4000/fileupload', formData)
             .then(res => {
                 console.log(res);
-                window.location.href = "/viewfileupload";
+               window.location.href = "/viewfileupload";
             })
             .catch(err => {
                 console.log(err);

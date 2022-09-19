@@ -18,7 +18,7 @@ const Formview = (props) => {
   const getData = async () => {
     const response = await axios.get("http://localhost:4000/view");
     setData(response.data);
-    // console.log(data)
+    console.log(getData);
   };
 
   const deleteData = async (id) => {

@@ -18,7 +18,8 @@ const ViewFileuploads = (props) => {
   const getData = async () => {
     const response = await axios.get("http://localhost:4000/viewfileupload");
     setData(response.data);
-    // console.log(data)
+
+    console.log(response.data)
   };
 
   const deleteData = async (id) => {

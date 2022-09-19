@@ -54,8 +54,8 @@ function App() {
         </Switch> */}
 
         {/* Home */}
-        <Route path="/homepage" element={<HomePage />}/>
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<HomePage />}/>
+        <Route path="/navebar" element={<Home />} />
         <Route path="/viewform" element={<Formview />} />
         <Route path="/viewfileupload" element={<ViewFileuploads />} />
 
