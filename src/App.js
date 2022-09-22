@@ -29,6 +29,10 @@ import { useState } from "react";
 
 import loginregRoute from "./registration&login/loginregRoute";
 import HomePage from "./HomePage";
+import DynamicTable from "./learing/TableData";
+import Tablemap from "./learing/Tablemap";
+import FormDatatable from "./Crud/FormDatatable";
+import Formtable from "./Crud/Formtable";
 
 function App() {
   // login&Register
@@ -53,6 +57,11 @@ function App() {
           </Route>
         </Switch> */}
 
+
+        {/* learing */}
+        <Route path="tabledata" element={<Tablemap />}/>
+        {/* <Route path="/DynamicTable" element ={<DynamicTable />}/> */}
+
         {/* Home */}
         <Route path="/home" element={<HomePage />}/>
         <Route path="/navebar" element={<Home />} />
@@ -72,6 +81,8 @@ function App() {
         <Route path="/viewform" element={<Formview />} />
         <Route path="/add" element={<Form />} />
         <Route path="/editform/:id" element={<Formedit />} />
+        <Route path="/formdata" element ={<FormDatatable />}/>
+        <Route path="/testformdata" element={<Formtable />}/>
 
         {/*  //Fileupload */}
 
