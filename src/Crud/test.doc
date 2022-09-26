@@ -230,3 +230,90 @@ console.log(formdata);
 }
 
 export default Formtable;
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+
+import { useState, useEffect, useRef } from "react";
+
+
+import axios from "axios";
+
+
+const Formtable = () => {
+
+    const [data, setData] = useState();
+    const headers = ['Column 1', 'Column 2', 'Column 3', 'Column 4'];
+
+    useEffect(() => {
+        
+      getData();
+      newData();
+      // calldata()
+    }, []);
+  
+    const getData = async () => {
+      const response = await axios.get("http://localhost:4000/view");
+      console.log(response.data);
+      setData(response.data);
+    
+    };
+  
+   
+    const newData = data.map((item) => {
+      console.log(data)
+      const newItem = [];
+      newItem['Column 1'] = {
+          value: item.firstname,
+        
+      };
+      newItem['Column 2'] = {
+          value: item.lastname,
+     
+      };
+      newItem['Column 3'] = {
+          value: item.username,
+        
+      };
+      newItem['Column 4'] = {
+          value: item.phone,
+          
+      };
+      return newItem;
+  });
+   
+
+
+  return (
+   <>
+   <div className='container'>
+   <table class="table table-bordered mt-3" style={{ width: "100%" }}>
+              <thead 
+              
+              >
+              {headers}
+
+              </thead>
+              <tbody>
+                {newData}
+
+              </tbody>
+            </table>
+   </div>
+
+
+   
+   </>
+  );
+}
+
+export default Formtable;

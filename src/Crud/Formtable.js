@@ -1,107 +1,80 @@
+import React from "react";
 
-
-import React from 'react';
-
-import { useState, useEffect, useRef } from "react";
-
+import { useState, useEffect } from "react";
 
 import axios from "axios";
 
+import Home from "../Home";
 
 const Formtable = () => {
+  const [data, setData] = useState();
+    const [header, setHeader] = useState([]);
+    const [row, setRow] = useState([]);
+  let formdata = [];
 
-    const [data, setData] = useState();
-    let formdata = [];
+  useEffect(() => {
+    getData();
+  }, []);
 
-    useEffect(() => {
-        
-      getData();
-      // calldata()
-    }, []);
-  
-    const getData = async () => {
-      const response = await axios.get("http://localhost:4000/view");
-      console.log(response.data);
-      setData(response.data);
+  const getData = async () => {
+    const response = await axios.get("http://localhost:4000/view");
+    console.log(response.data);
+    setData(response.data);
+
+    response.data?.map((x, index) => {
+      formdata.push({
+        No: index + 1,
+        FirstName: x.firstname,
+        LastName: x.phone,
+        action: <button className="btn btn-danger">Delete</button>,
+      });
+
+      // console.log(formdata);
+    });
+
+    const column = Object.keys(formdata[0]);
+
+    console.log(column);
+
+
+setHeader(
+       column.map((data1) => {
+        return <th key={data1}>{data1}</th>;
+      }));
+    // };
+
+    // get table row data
+
+setRow(
+   formdata.map((data1) => {
+    return (
+      <tr>
+        {column.map((v) => {
+          return <td>{data1[v]}</td>;
+        })}
+      </tr>
+    );
+  })
+
+);
     
-    };
-  
-   
 
-   // console.log(data);
-    
-
-// const calldata =()=>{
-  data?.map((x,index) => {
-    formdata.push({"No":index+1,"FirstName":x.firstname,"LastName":x.lastname})
  
-})
-
-// }
-
-console.log(formdata);
-
-  //   // get table column
-  //   const column = Object.keys(formdata[0]);
-  //   console.log(column);
-  //   const ThData = () => {
   
-  //     // get table heading data
-  
-  //     return column.map((data1) => {
-  //       return <th key={data1}>{data1}</th>
-  
-        
-  //     })
-  //   }
-  //   console.log(column);
-  //   // get table row data
-  //   const tdData = () => {
-  
-  //     return formdata.map((data1) => {
-  //       return (
-  //         <tr>
-  //           {
-  //             column.map((v) => {
-                
-  //               return <td>{data1[v]}</td>
-  //             })
-  //           }
-  //           <td>
-  
-  //             <button  className="btn btn-danger">
-  //               Delete
-  //             </button>
-  
-  
-  //           </td>
-  
-  //         </tr>
-  //       )
-  //     })
-  //   }
-  
+  };
 
 
-  // return (
-  //  <>
-  //  <div className='container'>
-  //  <table class="table table-bordered mt-3" style={{ width: "100%" }}>
-  //             <thead>
-  //               {ThData()}   <th scope="col"> Action </th>
-
-  //             </thead>
-  //             <tbody>
-  //               {tdData()}
-
-  //             </tbody>
-  //           </table>
-  //  </div>
-
-
-   
-  //  </>
-  // );
-}
+  return (
+    <>
+     <Home />
+      <div className="container">
+        <table class="table table-bordered mt-3" style={{ width: "100%" }}>
+          <thead>{header}  </thead>
+          <tbody>{row}</tbody>
+        </table>
+      </div>
+    </>
+  );
+};
 
 export default Formtable;
