@@ -23,10 +23,11 @@ const Login = () => {
 
     if (data.status == "ok") {
       localStorage.setItem("token", data.token);
+      alert('Login successful')
 
       navigate("/home");
     } else {
-      alert("Wrong Email or Password");
+      alert("Please check your username and password");
     }
   };
   return (
