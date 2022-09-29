@@ -24,8 +24,9 @@ const Formtable = () => {
     response.data?.map((x, index) => {
       formdata.push({
         No: index + 1,
-        FirstName: x.firstname,
+        FirstName: <button>{x.firstname}</button> ,
         LastName: x.phone,
+        phone:x.phone,
         action: <button className="btn btn-danger">Delete</button>,
       });
 
@@ -59,7 +60,6 @@ setRow(
 );
     
 
- 
   
   };
 

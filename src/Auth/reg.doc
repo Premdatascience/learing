@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from "axios";
+import { post } from 'jquery';
+import { Link } from "react-router-dom";
 
 const Register = () => {
 
@@ -22,7 +24,7 @@ const Register = () => {
 const registerdata = ()=>{
     const {name,email,password} = user
     if (name && email && password){
-     axios.post("http://localhost:6969/Register",user )
+     axios.post("http://localhost:4000/register",user )
      .then(res=>console.log(res))
     }
     else{
@@ -39,7 +41,7 @@ const registerdata = ()=>{
     <div className='container'>
 
    
-<form >
+<form onSubmit={registerdata} method={post}>
 <div class="mb-3">
     <label for="name" class="form-label">Name</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" 
@@ -63,6 +65,13 @@ const registerdata = ()=>{
 
   <button type="submit" class="btn btn-primary"  >Submit</button>
 </form>
+<div className="mt-3">
+        
+        <a className="nav-link active" aria-current="page" href="#"> <Link to="/login" >
+        Login
+            </Link></a>
+       
+        </div>
 </div>
 </div>
 </div>

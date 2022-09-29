@@ -23,78 +23,66 @@ import Home from "./Home";
 
 
 // login&Register
-import Register from "./registration&login/Register";
-import Login from "./registration&login/Login";
+
 import { useState } from "react";
 
-import loginregRoute from "./registration&login/loginregRoute";
 import HomePage from "./HomePage";
 import DynamicTable from "./learing/TableData";
 import Tablemap from "./learing/Tablemap";
 import FormDatatable from "./Crud/FormDatatable";
 import Formtable from "./Crud/Formtable";
+import Login from "./Auth/Login";
+import Register from "./Auth/Register";
+import ProtectedRoute from "./Auth/ProtectedRoute.js";
 
 function App() {
   // login&Register
   const [user, setLoginUser] = useState({});
 
   return (
-    <Router>
-      <Routes>
-        
-        {/* registration&login */}
-{/* 
-        <Switch>
-          <Route exact path="/">
-            {user && user._id ? <Home /> : <Login />}
-            <Home />
-          </Route>
-          <Route path="/register">
-            <Login setLoginUser={setLoginUser} />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-        </Switch> */}
+    <>
+      <Router>
+        <Routes>
+          {/* AUTH registration&login */}
 
+          <Route path="/" exact element={<Login />} />
+          <Route path="/register" exact element={<Register />} />
+          <Route path="/home"   element={<HomePage />} />
 
-        {/* learing */}
-        <Route path="tabledata" element={<Tablemap />}/>
-        {/* <Route path="/DynamicTable" element ={<DynamicTable />}/> */}
+          {/* learing */}
+          <Route path="tabledata" element={<Tablemap />} />
+          {/* <Route path="/DynamicTable" element ={<DynamicTable />}/> */}
 
-        {/* Home */}
-        <Route path="/home" element={<HomePage />}/>
-        <Route path="/navebar" element={<Home />} />
-        <Route path="/viewform" element={<Formview />} />
-        <Route path="/viewfileupload" element={<ViewFileuploads />} />
+          {/* Home */}
 
-        {/* basic */}
-        <Route path="/testform" element={<Formtest />} />
-        <Route path="/basic" element={<Employee />} />
-        <Route path="/handelclick" element={<HandleclickCC />} />
-        <Route path="/usestate" element={<BasicUsestate />} />
-        <Route path="/useeffect" element={<BasicuseEffect />} />
+          <Route path="/navebar" element={<Home />} />
+          <Route path="/viewform" element={<Formview />} />
+          <Route path="/viewfileupload" element={<ViewFileuploads />} />
 
-        {/* crud */}
+          {/* basic */}
+          <Route path="/testform" element={<Formtest />} />
+          <Route path="/basic" element={<Employee />} />
+          <Route path="/handelclick" element={<HandleclickCC />} />
+          <Route path="/usestate" element={<BasicUsestate />} />
+          <Route path="/useeffect" element={<BasicuseEffect />} />
 
-        <Route path="/form" element={<Form />} />
-        <Route path="/viewform" element={<Formview />} />
-        <Route path="/add" element={<Form />} />
-        <Route path="/editform/:id" element={<Formedit />} />
-        <Route path="/formdata" element ={<FormDatatable />}/>
-        <Route path="/testformdata" element={<Formtable />}/>
+          {/* crud */}
 
-        {/*  //Fileupload */}
+          <Route path="/form" element={<Form />} />
+          <Route path="/viewform" element={<Formview />} />
+          <Route path="/add" element={<Form />} />
+          <Route path="/editform/:id" element={<Formedit />} />
+          <Route path="/formdata" element={<FormDatatable />} />
+          <Route path="/testformdata" element={<Formtable />} />
 
-        <Route path="/fileupload" element={<Fileupload />} />
-        <Route path="/addupload" element={<Fileupload />} />
-        <Route path="/viewfileupload" element={<ViewFileuploads />} />
+          {/*  //Fileupload */}
 
-        {/* 
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} /> */}
-      </Routes>
-    </Router>
+          <Route path="/fileupload" element={<Fileupload />} />
+          <Route path="/addupload" element={<Fileupload />} />
+          <Route path="/viewfileupload" element={<ViewFileuploads />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
