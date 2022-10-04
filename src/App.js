@@ -21,6 +21,8 @@ import Fileupload from "./fileupload/Fileupload";
 import ViewFileuploads from "./fileupload/ViewFileupload";
 import Home from "./Home";
 
+// formvalidation 
+import FormVal from "./FormVal/FormVal";
 
 // login&Register
 
@@ -34,6 +36,8 @@ import Formtable from "./Crud/Formtable";
 import Login from "./Auth/Login";
 import Register from "./Auth/Register";
 import ProtectedRoute from "./Auth/ProtectedRoute.js";
+import ViewFormval from "./FormVal/ViewFormval";
+import ViewformDatatable from "./FormVal/ViewformDatatable";
 
 function App() {
   // login&Register
@@ -48,6 +52,12 @@ function App() {
           <Route path="/" exact element={<Login />} />
           <Route path="/register" exact element={<Register />} />
           <Route path="/home"   element={<HomePage />} />
+
+          {/* formvalidation  */}
+
+          <Route path="/formval" element={<FormVal />}/>
+          <Route path="/viewformval" element={<ViewFormval />}/>
+          <Route path="/datatable" element={<ViewformDatatable />}/>
 
           {/* learing */}
           <Route path="tabledata" element={<Tablemap />} />

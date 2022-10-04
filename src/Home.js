@@ -51,6 +51,18 @@ const Home = () => {
                     <Link to="/testformdata">Formtable</Link>
                   </a>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    {" "}
+                    <Link to="/viewformval">FormValidation </Link>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    {" "}
+                    <Link to="/datatable">datatable</Link>
+                  </a>
+                </li>
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
