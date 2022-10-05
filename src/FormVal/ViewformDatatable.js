@@ -30,8 +30,9 @@ const ViewformDatatable = () => {
         No: index + 1,
      
         LastName: x.email,
+        name:x.Zip,
       
-        action: <button  onClick={() => deleteData(x._id).then(getData())}  className="btn btn-danger" >Delete</button>,
+        action: <button  onClick={() => deleteData(x._id).then( window.location.href = "/datatable")}  className="btn btn-danger" >Delete</button>,
       });
 
       // console.log(formdata);
