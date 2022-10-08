@@ -1,8 +1,20 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 
 const Home = () => {
+  const getToken = localStorage.getItem("token");
+  console.log(getToken);
+  var decoded = jwt_decode(getToken);
+
+  console.log(decoded.name);
+ 
+  const Roleid = decoded.name
+
+  const logout = () => {
+    localStorage.clear(getToken);
+};
   return (
     <>
       <div>
@@ -34,22 +46,25 @@ const Home = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    {" "}
+                
+                {Roleid==="admin"?  <a className="nav-link" href="#">
+             
                     <Link to="/viewform">Form Registertion</Link>
-                  </a>
+                  </a>:<div></div>}
                 </li>
                 <li className="nav-item">
+                {Roleid==="admin"?
                   <a className="nav-link" href="#">
-                    {" "}
+                 
                     <Link to="/viewfileupload">Fileupload</Link>
-                  </a>
+                  </a>:<div></div>}
                 </li>
                 <li className="nav-item">
+                {Roleid==="admin"?
                   <a className="nav-link" href="#">
                     {" "}
                     <Link to="/testformdata">Formtable</Link>
-                  </a>
+                  </a>:<div></div>}
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">
@@ -96,9 +111,9 @@ const Home = () => {
                 </li>
               </ul>
 
-              <a className="nav-link" href="#">
-                {" "}
-                <Link to="/">Logout</Link>
+              <a className="nav-link" onClick={logout} href="/login" >
+             
+                Logout
               </a>
             </div>
           </div>

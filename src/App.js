@@ -21,7 +21,7 @@ import Fileupload from "./fileupload/Fileupload";
 import ViewFileuploads from "./fileupload/ViewFileupload";
 import Home from "./Home";
 
-// formvalidation 
+// formvalidation
 import FormVal from "./FormVal/FormVal";
 
 // login&Register
@@ -35,61 +35,61 @@ import FormDatatable from "./Crud/FormDatatable";
 import Formtable from "./Crud/Formtable";
 import Login from "./Auth/Login";
 import Register from "./Auth/Register";
-import ProtectedRoute from "./Auth/ProtectedRoute.js";
+
 import ViewFormval from "./FormVal/ViewFormval";
 import ViewformDatatable from "./FormVal/ViewformDatatable";
-
+import { ProtectedRoute, PublicdRoute } from "./Auth/ProtectedRoute.js";
 function App() {
-  // login&Register
-  const [user, setLoginUser] = useState({});
-
   return (
     <>
       <Router>
         <Routes>
+          <Route element={<PublicdRoute />}>
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/register" exact element={<Register />} />
+          </Route>
           {/* AUTH registration&login */}
+          <Route element={<ProtectedRoute />}>
+            <Route path="/" element={<HomePage />} />
 
-          <Route path="/" exact element={<Login />} />
-          <Route path="/register" exact element={<Register />} />
-          <Route path="/home"   element={<HomePage />} />
+            {/* formvalidation  */}
 
-          {/* formvalidation  */}
+            <Route path="/formval" element={<FormVal />} />
+            <Route path="/viewformval" element={<ViewFormval />} />
+            <Route path="/datatable" element={<ViewformDatatable />} />
 
-          <Route path="/formval" element={<FormVal />}/>
-          <Route path="/viewformval" element={<ViewFormval />}/>
-          <Route path="/datatable" element={<ViewformDatatable />}/>
+            {/* learing */}
+            <Route path="tabledata" element={<Tablemap />} />
+            {/* <Route path="/DynamicTable" element ={<DynamicTable />}/> */}
 
-          {/* learing */}
-          <Route path="tabledata" element={<Tablemap />} />
-          {/* <Route path="/DynamicTable" element ={<DynamicTable />}/> */}
+            {/* Home */}
 
-          {/* Home */}
+            <Route path="/navebar" element={<Home />} />
+            <Route path="/viewform" element={<Formview />} />
+            <Route path="/viewfileupload" element={<ViewFileuploads />} />
 
-          <Route path="/navebar" element={<Home />} />
-          <Route path="/viewform" element={<Formview />} />
-          <Route path="/viewfileupload" element={<ViewFileuploads />} />
+            {/* basic */}
+            <Route path="/testform" element={<Formtest />} />
+            <Route path="/basic" element={<Employee />} />
+            <Route path="/handelclick" element={<HandleclickCC />} />
+            <Route path="/usestate" element={<BasicUsestate />} />
+            <Route path="/useeffect" element={<BasicuseEffect />} />
 
-          {/* basic */}
-          <Route path="/testform" element={<Formtest />} />
-          <Route path="/basic" element={<Employee />} />
-          <Route path="/handelclick" element={<HandleclickCC />} />
-          <Route path="/usestate" element={<BasicUsestate />} />
-          <Route path="/useeffect" element={<BasicuseEffect />} />
+            {/* crud */}
 
-          {/* crud */}
+            <Route path="/form" element={<Form />} />
+            <Route path="/viewform" element={<Formview />} />
+            <Route path="/add" element={<Form />} />
+            <Route path="/editform/:id" element={<Formedit />} />
+            <Route path="/formdata" element={<FormDatatable />} />
+            <Route path="/testformdata" element={<Formtable />} />
 
-          <Route path="/form" element={<Form />} />
-          <Route path="/viewform" element={<Formview />} />
-          <Route path="/add" element={<Form />} />
-          <Route path="/editform/:id" element={<Formedit />} />
-          <Route path="/formdata" element={<FormDatatable />} />
-          <Route path="/testformdata" element={<Formtable />} />
+            {/*  //Fileupload */}
 
-          {/*  //Fileupload */}
-
-          <Route path="/fileupload" element={<Fileupload />} />
-          <Route path="/addupload" element={<Fileupload />} />
-          <Route path="/viewfileupload" element={<ViewFileuploads />} />
+            <Route path="/fileupload" element={<Fileupload />} />
+            <Route path="/addupload" element={<Fileupload />} />
+            <Route path="/viewfileupload" element={<ViewFileuploads />} />
+          </Route>
         </Routes>
       </Router>
     </>

@@ -1,29 +1,22 @@
-import React from 'react';
-import { Route , Redirect} from 'react-router-dom';
+import React from "react";
+import { Navigate, Outlet } from 'react-router-dom'
 
-const ProtectedRoute = (component,...rest) => {
-var RenderComponents = component;
+const ProtectedRoute = () => {
+
+ 
+    let auth =localStorage.getItem("token")
   return (
-    <Route
-    {...rest}
-    render={prop=>{
-         return true ? (
-        <RenderComponents {...prop}/>
-         ):(
-<Redirect 
-to = {{
-    pathname:"login"
-}}
-/>
-         )
-
-    }}/>
-    
+      auth ? <Outlet/> : <Navigate to='/login'/>
     )
 }
-    
+
+const PublicdRoute = () => {
+
  
-    
+  let auth =localStorage.getItem("token")
+return (
+    auth ?   <Navigate to='/'/>:<Outlet/>
+  )
+}
 
-
-export default ProtectedRoute;
+export  {ProtectedRoute,PublicdRoute};

@@ -25,7 +25,7 @@ const Login = () => {
       localStorage.setItem("token", data.token);
       alert('Login successful')
 
-      navigate("/home");
+      navigate("/");
     } else {
       alert("Please check your username and password");
     }

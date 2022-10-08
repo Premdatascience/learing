@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
@@ -14,9 +15,10 @@ const Register = () => {
     const req = await fetch("http://localhost:4000/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: await JSON.stringify({
+      body:  JSON.stringify({
         name,
         email,
+        role,
         password,
       }),
     });
@@ -47,6 +49,13 @@ const Register = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <br />
+        <select name="role" type="role"value={role} onChange={(e) => setRole(e.target.value)}>
+          <option value="">role</option>
+          <option value="0">admin</option>
+          <option value="1">user</option>
+        
+        </select>
+        <br />
         <input
           placeholder="Password"
           type="password"
@@ -57,9 +66,10 @@ const Register = () => {
         <input type="submit" />
       </form>
 
-	  <a className="nav-link active" aria-current="page" href="#"> <Link to="/" >
-          Login
-                  </Link></a>
+      <a className="nav-link active" aria-current="page" href="#">
+        {" "}
+        <Link to="/">Login</Link>
+      </a>
     </div>
   );
 };
