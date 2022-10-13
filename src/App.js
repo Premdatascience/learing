@@ -39,6 +39,7 @@ import Register from "./Auth/Register";
 import ViewFormval from "./FormVal/ViewFormval";
 import ViewformDatatable from "./FormVal/ViewformDatatable";
 import { ProtectedRoute, PublicdRoute } from "./Auth/ProtectedRoute.js";
+import FormValEdit from "./FormVal/FomValEdit";
 function App() {
   return (
     <>
@@ -57,6 +58,7 @@ function App() {
             <Route path="/formval" element={<FormVal />} />
             <Route path="/viewformval" element={<ViewFormval />} />
             <Route path="/datatable" element={<ViewformDatatable />} />
+            <Route path="/formvaledit/:id" element={<FormValEdit />}/>
 
             {/* learing */}
             <Route path="tabledata" element={<Tablemap />} />

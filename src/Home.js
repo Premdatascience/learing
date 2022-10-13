@@ -5,10 +5,10 @@ import jwt_decode from "jwt-decode";
 
 const Home = () => {
   const getToken = localStorage.getItem("token");
-  console.log(getToken);
+  // console.log(getToken);
   var decoded = jwt_decode(getToken);
 
-  console.log(decoded.name);
+  // console.log(decoded.name);
  
   const Roleid = decoded.name
 

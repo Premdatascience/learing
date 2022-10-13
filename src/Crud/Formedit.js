@@ -34,7 +34,8 @@ const Formedit = () => {
     formState: { errors },
   } = useForm();
 
-  const updateData = async (data) => {
+  const updateData = async (data) =>
+   {
     
     await axios.put(`http://localhost:4000/update/${id}`, data);
     navigate("/viewform");

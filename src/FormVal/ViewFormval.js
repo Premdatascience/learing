@@ -91,11 +91,15 @@ const ViewFormval = () => {
                   
               
                       <td>
-                    
+                      <Link to={`/formvaledit/${formval._id}`} className="btn btn-info">
+                        Edit
+                      </Link>
                         <button onClick={() => deleteData(formval._id)} className="btn btn-danger">
                           Delete
                         </button>
+                      
                       </td>
+                      
                     </tr>
                   ))}
                 </tbody>

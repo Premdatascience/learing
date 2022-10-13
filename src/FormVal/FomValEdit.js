@@ -1,36 +1,53 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
-const FormVal = () => {
+const FormValEdit = () => {
+  const [editUser, setEditUser] = useState({
+    email: "",
+    password: "",
+    address: "",
+    address2: "",
+    City: "",
+    Zip: "",
+  });
+  const navigate = useNavigate();
+  const { id } = useParams();
+
   const {
     register,
     handleSubmit,
     watch,
+    reset,
+    
 
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    let { email, password, address, address2, City, Zip } = data;
-    axios
-      .post("http://localhost:4000/formcreate", {
+    axios.put(`http://localhost:4000/formupdate/${id}`, data);
 
-        email: email, 
-        password: password,
-        address: address, 
-        address2: address2, 
-        City: City, 
-         Zip:Zip,
-      })
-      .then((res) => {
-        console.log(res);
+    // window.location.href = "/viewformval";
+    navigate("/viewformval");
+  };
 
-        window.location.href = "/viewformval";
-      })
+  const handeledit = (e) => {
+    setEditUser({ ...editUser, [e.target.name]: [e.target.value] });
+  };
 
-      .catch((err) => console.log(err));
+  useEffect(() => {
+    getDataById();
+  }, []);
+
+  const getDataById = async () => {
+    const response = await axios.get(`http://localhost:4000/formview/${id}`);
+
+    console.log(response.data);
+    reset(response.data);
+
+    console.log(editUser);
   };
 
   // console.log(data)
@@ -40,6 +57,7 @@ const FormVal = () => {
         <div className="card mt-5">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div class="form-row">
+              <h1>update form</h1>
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
                 <input
@@ -47,6 +65,7 @@ const FormVal = () => {
                   class="form-control"
                   id="inputEmail4"
                   placeholder="Email"
+                  onChange={handeledit}
                   name="email"
                   {...register("email", {
                     required: "email Name is required",
@@ -65,6 +84,7 @@ const FormVal = () => {
                   class="form-control"
                   id="inputPassword4"
                   placeholder="Password"
+                  onChange={handeledit}
                   name="password"
                   {...register("password", {
                     required: "password Name is required",
@@ -86,6 +106,7 @@ const FormVal = () => {
                 class="form-control"
                 id="inputAddress"
                 placeholder="1234 Main St"
+                onChange={handeledit}
                 name="address"
                 {...register("address", {
                   required: "Address Name is required",
@@ -104,6 +125,7 @@ const FormVal = () => {
                 class="form-control"
                 id="inputAddress2"
                 placeholder="Apartment, studio, or floor"
+                onChange={handeledit}
                 name="address2"
                 {...register("address2", {
                   required: "Address2 Name is required",
@@ -122,6 +144,7 @@ const FormVal = () => {
                   type="text"
                   class="form-control"
                   id="inputCity"
+                  onChange={handeledit}
                   name="City"
                   {...register("City", {
                     required: "City Name is required",
@@ -140,6 +163,7 @@ const FormVal = () => {
                   type="text"
                   class="form-control"
                   id="inputZip"
+                  onChange={handeledit}
                   name="Zip"
                   {...register("Zip", {
                     required: "Zip Name is required",
@@ -163,4 +187,4 @@ const FormVal = () => {
   );
 };
 
-export default FormVal;
+export default FormValEdit;
