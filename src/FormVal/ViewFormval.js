@@ -10,6 +10,8 @@ import Home from "../Home";
 
 const ViewFormval = () => {
     const [data, setData] = useState([]);
+    const [filterdata, setFilterdata]= useState([]);
+    const [query, setQuery] = useState('');
 
     useEffect(() => {
       getData();
@@ -20,6 +22,7 @@ const ViewFormval = () => {
       setData(response.data);
       console.log(getData);
       console.log(response.data);
+      setFilterdata(response.data);
     };
   
     const deleteData = async (id) => {
@@ -32,7 +35,17 @@ const ViewFormval = () => {
   
    
   
-  
+    const handlesearch=(event)=>{
+      const getSearch= event.target.value; 
+      if(getSearch.length > 0)
+      {     
+       const searchdata= data.filter( (item)=> item.email.toLowerCase().includes(getSearch));
+       setData(searchdata);
+      } else {
+        setData(filterdata);
+      }
+      setQuery(getSearch);
+    }
   
     return (
       <>
@@ -57,6 +70,10 @@ const ViewFormval = () => {
                     <Link to="/formval" type="button" className="btn btn-success">
                       Add New
                     </Link>
+                  </div>
+                  <div className='col'>
+                    <input  type="text" name='name' value={query}   className="form-control" onChange={(e)=>handlesearch(e)} placeholder='Search...' />
+
                   </div>
                 </div>
               </div>
