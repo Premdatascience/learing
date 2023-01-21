@@ -42,7 +42,7 @@ const Home = () => {
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
                     {" "}
-                    <Link to="/home">Home</Link>
+                    <Link to="/">Home</Link>
                   </a>
                 </li>
                 <li className="nav-item">
