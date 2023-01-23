@@ -78,6 +78,12 @@ const Home = () => {
                     <Link to="/datatable">datatable</Link>
                   </a>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    {" "}
+                    <Link to="/redux">Redux</Link>
+                  </a>
+                </li>
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"

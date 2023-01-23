@@ -40,6 +40,7 @@ import ViewFormval from "./FormVal/ViewFormval";
 import ViewformDatatable from "./FormVal/ViewformDatatable";
 import { ProtectedRoute, PublicdRoute } from "./Auth/ProtectedRoute.js";
 import FormValEdit from "./FormVal/FomValEdit";
+import ReduxConcepts from "./ReduxConcepts/ReduxConcepts";
 function App() {
   return (
     <>
@@ -91,6 +92,9 @@ function App() {
             <Route path="/fileupload" element={<Fileupload />} />
             <Route path="/addupload" element={<Fileupload />} />
             <Route path="/viewfileupload" element={<ViewFileuploads />} />
+            {/* reduxconcepts */}
+            <Route path="/redux" element={<ReduxConcepts />} />
+
           </Route>
         </Routes>
       </Router>
