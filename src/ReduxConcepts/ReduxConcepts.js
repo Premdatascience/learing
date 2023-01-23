@@ -25,7 +25,7 @@ const ReduxConcepts = () => {
   }
   //store
   let store =createStoreHook(ComedyReducer);
-store.subscribe(()=>{console.log(store.getState);})
+// store.subscribe(()=>{console.log(store.getState);})
   // store.Dispatch(VadiveluComedyAction());
 
 
