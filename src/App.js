@@ -41,6 +41,7 @@ import ViewformDatatable from "./FormVal/ViewformDatatable";
 import { ProtectedRoute, PublicdRoute } from "./Auth/ProtectedRoute.js";
 import FormValEdit from "./FormVal/FomValEdit";
 import ReduxConcepts from "./ReduxConcepts/ReduxConcepts";
+import Contexthook from "./Contexthook/Contexthook";
 function App() {
   return (
     <>
@@ -92,6 +93,9 @@ function App() {
             <Route path="/fileupload" element={<Fileupload />} />
             <Route path="/addupload" element={<Fileupload />} />
             <Route path="/viewfileupload" element={<ViewFileuploads />} />
+            {/* Contexthook */}
+            <Route path="/Contexthook" element={<Contexthook/>} />
+           
             {/* reduxconcepts */}
             <Route path="/redux" element={<ReduxConcepts />} />
 
