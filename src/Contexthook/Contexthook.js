@@ -9,7 +9,7 @@ const Contexthook = () => {
 <Home />
 
 <div>Contexthook</div>
-<Mycontext.Provider value='kutty'>
+<Mycontext.Provider value='kumar'>
 
 <Compound1 />
 

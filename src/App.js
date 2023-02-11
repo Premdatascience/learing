@@ -42,6 +42,7 @@ import { ProtectedRoute, PublicdRoute } from "./Auth/ProtectedRoute.js";
 import FormValEdit from "./FormVal/FomValEdit";
 import ReduxConcepts from "./ReduxConcepts/ReduxConcepts";
 import Contexthook from "./Contexthook/Contexthook";
+import Reduxapp from "./ReduxConcepts/Reduxapp";
 function App() {
   return (
     <>
@@ -98,6 +99,8 @@ function App() {
            
             {/* reduxconcepts */}
             <Route path="/redux" element={<ReduxConcepts />} />
+            {/* <Route path="/redux" element={<Reduxapp />} /> */}
+
 
           </Route>
         </Routes>

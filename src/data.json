@@ -1,0 +1,1011 @@
+
+
+
+[
+    {
+        "id": 2,
+        "name": "A",
+        "visible": 1,
+        "section_role": "student",
+        "sectiontype": "main",
+        "coursefullname": "2022-Moral Science",
+        "courseshortname": "2022-MoralScience",
+        "sectioncompletion": false,
+        "summary": "",
+        "summaryformat": 1,
+        "section": 1,
+        "hiddenbynumsections": 0,
+        "uservisible": true,
+        "modules": [
+            {
+                "id": 34,
+                "url": "https://lxl-stg-lms.ken42.com/mod/resource/view.php?id=34",
+                "name": "Facilitator's Manual",
+                "instance": "1",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Files",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"a:1:{s:10:\\\"printintro\\\";i:1;}\"",
+                "noviewlink": false,
+                "completion": 0,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "resource",
+                "contents": [
+                    {
+                        "type": "file",
+                        "filename": "Facilitator Manual Class 6.pdf",
+                        "filepath": "/",
+                        "filesize": 2651924,
+                        "fileurl": "https://lxl-stg-lms.ken42.com/webservice/pluginfile.php/71/mod_resource/content/2/Facilitator%20Manual%20Class%206.pdf?forcedownload=1",
+                        "timecreated": 1671603673,
+                        "timemodified": 1671603677,
+                        "sortorder": 1,
+                        "mimetype": "application/pdf",
+                        "isexternalfile": false,
+                        "userid": 2,
+                        "author": "Ken42 Admin",
+                        "license": "unknown"
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 2651924,
+                    "lastmodified": 1671603677,
+                    "mimetypes": [
+                        "application/pdf"
+                    ],
+                    "repositorytype": ""
+                }
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "name": "All is Well",
+        "visible": 1,
+        "section_role": "student",
+        "sectiontype": "sub",
+        "coursefullname": "2022-Moral Science",
+        "courseshortname": "2022-MoralScience",
+        "sectioncompletion": false,
+        "summary": "",
+        "summaryformat": 1,
+        "section": 2,
+        "hiddenbynumsections": 0,
+        "uservisible": true,
+        "modules": [
+            {
+                "id": 35,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=35",
+                "name": "AIW-Fun Questions",
+                "instance": "1",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "{\"customcompletionrules\":{\"completionattemptsexhausted\":\"0\",\"completionpass\":\"1\"}}",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "timeopen": "1672327440",
+                "timeclose": "1703863440",
+                "complitionstatus": "Not Completed",
+                "attempts": 4,
+                "lastaccess": "1672400406",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 45,
+                "url": "https://lxl-stg-lms.ken42.com/mod/url/view.php?id=45",
+                "name": "AIW-Film Link",
+                "description": "Frustrated, Ayush has decided to run away from home. But when he meets Bhola, a happy-go-lucky chai boy who lives on the streets, he starts to realize that may be his life wasn’t so bad afterall.",
+                "instance": "2",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Film"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "URLs",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "url",
+                "completiondata": {
+                    "state": 1,
+                    "timecompleted": 1672722590,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [
+                    {
+                        "type": "url",
+                        "filename": "AIW-Film Link",
+                        "filepath": null,
+                        "filesize": 0,
+                        "fileurl": "https://player.vimeo.com/video/763264683?h=b0f0225c42&badge=0&autopause=0&player_id=0&app_id=58479",
+                        "timecreated": null,
+                        "timemodified": 1672817106,
+                        "sortorder": null,
+                        "userid": null,
+                        "author": null,
+                        "license": null
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 0,
+                    "lastmodified": 1672817106,
+                    "mimetypes": [],
+                    "repositorytype": ""
+                }
+            },
+            {
+                "id": 62,
+                "url": "https://lxl-stg-lms.ken42.com/mod/resource/view.php?id=62",
+                "name": "AIW - resource",
+                "description": "",
+                "instance": "6",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Files",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"a:1:{s:10:\\\"printintro\\\";i:1;}\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "resource",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [
+                    {
+                        "type": "file",
+                        "filename": "all is well.jpg",
+                        "filepath": "/",
+                        "filesize": 477277,
+                        "fileurl": "https://lxl-stg-lms.ken42.com/webservice/pluginfile.php/110/mod_resource/content/2/all%20is%20well.jpg?forcedownload=1",
+                        "timecreated": 1672722441,
+                        "timemodified": 1672722467,
+                        "sortorder": 1,
+                        "mimetype": "image/jpeg",
+                        "isexternalfile": false,
+                        "userid": 2,
+                        "author": "Ken42 Admin",
+                        "license": "unknown"
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 477277,
+                    "lastmodified": 1672722467,
+                    "mimetypes": [
+                        "image/jpeg"
+                    ],
+                    "repositorytype": ""
+                }
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Apples and Oranges",
+        "visible": 1,
+        "section_role": "student",
+        "sectiontype": "sub",
+        "coursefullname": "2022-Moral Science",
+        "courseshortname": "2022-MoralScience",
+        "sectioncompletion": false,
+        "summary": "",
+        "summaryformat": 1,
+        "section": 3,
+        "hiddenbynumsections": 0,
+        "uservisible": true,
+        "modules": [
+            {
+                "id": 47,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=47",
+                "name": "A&amp;O-Fun Questions",
+                "description": "13 year old Dev wants to be a journalist when he grows up - but before that, he wants to understand what goes into making news. This documentary follows his search for the truth, which finally leads him right to a television news personality!",
+                "instance": "4",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "{\"customcompletionrules\":{\"completionattemptsexhausted\":\"0\",\"completionpass\":\"0\"}}",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "timeopen": "1672133400",
+                "timeclose": "1679909400",
+                "complitionstatus": "Not Completed",
+                "attempts": 0,
+                "lastaccess": null,
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 50,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=50",
+                "name": "A&amp;O - Action Time",
+                "description": "",
+                "instance": "5",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Action Time"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "timeopen": "1672137300",
+                "timeclose": "0",
+                "complitionstatus": "Not Completed",
+                "attempts": 0,
+                "lastaccess": null,
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 46,
+                "url": "https://lxl-stg-lms.ken42.com/mod/url/view.php?id=46",
+                "name": "A&amp;O -Film Link",
+                "description": "In the land of Fruitistan, there live two kinds of people - Applers and OrangeesThe film starts in a jungle where two girls named Tulip and Daisy meet accidentally, become best of friends. However, their friendship soon turns sour when they discover that one of them is an Appler&amp; and the other an ‘Orangee. Now what is the story about Applers and Orangees?",
+                "instance": "3",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Film"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "URLs",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "url",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [
+                    {
+                        "type": "url",
+                        "filename": "Aamp;O -Film Link",
+                        "filepath": null,
+                        "filesize": 0,
+                        "fileurl": "https://player.vimeo.com/video/763267167?h=25c85a3bfb&badge=0&autopause=0&player_id=0&app_id=58479",
+                        "timecreated": null,
+                        "timemodified": 1675400836,
+                        "sortorder": null,
+                        "userid": null,
+                        "author": null,
+                        "license": null
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 0,
+                    "lastmodified": 1675400836,
+                    "mimetypes": [],
+                    "repositorytype": ""
+                }
+            },
+            {
+                "id": 63,
+                "url": "https://lxl-stg-lms.ken42.com/mod/resource/view.php?id=63",
+                "name": "A&amp;O - Resource",
+                "instance": "7",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Files",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"a:1:{s:10:\\\"printintro\\\";i:1;}\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "resource",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [
+                    {
+                        "type": "file",
+                        "filename": "Apples and Oranges.jpg",
+                        "filepath": "/",
+                        "filesize": 381111,
+                        "fileurl": "https://lxl-stg-lms.ken42.com/webservice/pluginfile.php/111/mod_resource/content/1/Apples%20and%20Oranges.jpg?forcedownload=1",
+                        "timecreated": 1672722741,
+                        "timemodified": 1672722747,
+                        "sortorder": 1,
+                        "mimetype": "image/jpeg",
+                        "isexternalfile": false,
+                        "userid": 2,
+                        "author": "Ken42 Admin",
+                        "license": "unknown"
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 381111,
+                    "lastmodified": 1672722747,
+                    "mimetypes": [
+                        "image/jpeg"
+                    ],
+                    "repositorytype": ""
+                }
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Wake up Dev",
+        "visible": 1,
+        "section_role": "student",
+        "sectiontype": "sub",
+        "coursefullname": "2022-Moral Science",
+        "courseshortname": "2022-MoralScience",
+        "sectioncompletion": false,
+        "summary": "",
+        "summaryformat": 1,
+        "section": 4,
+        "hiddenbynumsections": 0,
+        "uservisible": true,
+        "modules": [
+            {
+                "id": 51,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=51",
+                "name": "WUD-Fun Questions",
+                "description": "",
+                "instance": "6",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "{\"customcompletionrules\":{\"completionattemptsexhausted\":\"0\",\"completionpass\":\"0\"}}",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "timeopen": "1672137660",
+                "timeclose": "1680259260",
+                "complitionstatus": "Not Completed",
+                "attempts": 1,
+                "lastaccess": "1675748066",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 49,
+                "url": "https://lxl-stg-lms.ken42.com/mod/url/view.php?id=49",
+                "name": "WUD-Film Link",
+                "description": "13 year old Dev wants to be a journalist when he grows up - but before that, he wants to understand what goes into making news. This documentary follows his search for the truth, which finally leads him right to a television news personality!",
+                "instance": "4",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Film"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "URLs",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 0,
+                "uservisible": false,
+                "visibleoncoursepage": 1,
+                "modname": "url",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 52,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=52",
+                "name": "WUD- Action Time",
+                "instance": "7",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Action Time"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "timeopen": "1672139040",
+                "timeclose": "1674817440",
+                "complitionstatus": "Not Completed",
+                "attempts": 0,
+                "lastaccess": null,
+                "publish": 0,
+                "uservisible": false,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 64,
+                "url": "https://lxl-stg-lms.ken42.com/mod/resource/view.php?id=64",
+                "name": "WUD - Resource",
+                "instance": "8",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Files",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"a:1:{s:10:\\\"printintro\\\";i:1;}\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 0,
+                "uservisible": false,
+                "visibleoncoursepage": 1,
+                "modname": "resource",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Teacher Film",
+        "visible": 1,
+        "section_role": "faculty",
+        "sectiontype": "sub",
+        "coursefullname": "2022-Moral Science",
+        "courseshortname": "2022-MoralScience",
+        "sectioncompletion": false,
+        "summary": "",
+        "summaryformat": 1,
+        "section": 5,
+        "hiddenbynumsections": 0,
+        "uservisible": true,
+        "modules": [
+            {
+                "id": 54,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=54",
+                "name": "Ballaji-Fun Questions",
+                "instance": "8",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": ""
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "timeopen": "1672142340",
+                "timeclose": "1674820740",
+                "complitionstatus": "Not Completed",
+                "attempts": 0,
+                "lastaccess": null,
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 56,
+                "url": "https://lxl-stg-lms.ken42.com/mod/resource/view.php?id=56",
+                "name": "Facilitator Manual - Bhallaji",
+                "description": "13 year old Dev wants to be a journalist when he grows up - but before that, he wants to understand what goes into making news. This documentary follows his search for the truth, which finally leads him right to a television news personality!",
+                "instance": "4",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Files",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"a:1:{s:10:\\\"printintro\\\";i:1;}\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "resource",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [
+                    {
+                        "type": "file",
+                        "filename": "i say bhallaji.jpg",
+                        "filepath": "/",
+                        "filesize": 349849,
+                        "fileurl": "https://lxl-stg-lms.ken42.com/webservice/pluginfile.php/101/mod_resource/content/2/i%20say%20bhallaji.jpg?forcedownload=1",
+                        "timecreated": 1672723159,
+                        "timemodified": 1672723175,
+                        "sortorder": 1,
+                        "mimetype": "image/jpeg",
+                        "isexternalfile": false,
+                        "userid": 2,
+                        "author": "Ken42 Admin",
+                        "license": "unknown"
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 349849,
+                    "lastmodified": 1672723175,
+                    "mimetypes": [
+                        "image/jpeg"
+                    ],
+                    "repositorytype": ""
+                }
+            },
+            {
+                "id": 55,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=55",
+                "name": "Ballaji-Action Time",
+                "instance": "9",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Action Time"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "timeopen": "1672144020",
+                "timeclose": "1677500820",
+                "complitionstatus": "Not Completed",
+                "attempts": 0,
+                "lastaccess": null,
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 53,
+                "url": "https://lxl-stg-lms.ken42.com/mod/url/view.php?id=53",
+                "name": "Ballaji-Film Link",
+                "description": "",
+                "instance": "5",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Film"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "URLs",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "url",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [
+                    {
+                        "type": "url",
+                        "filename": "Ballaji-Film Link",
+                        "filepath": null,
+                        "filesize": 0,
+                        "fileurl": "https://player.vimeo.com/video/763337755?h=326a00b1d5&badge=0&autopause=0&player_id=0&app_id=58479",
+                        "timecreated": null,
+                        "timemodified": 1672725231,
+                        "sortorder": null,
+                        "userid": null,
+                        "author": null,
+                        "license": null
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 0,
+                    "lastmodified": 1672725231,
+                    "mimetypes": [],
+                    "repositorytype": ""
+                }
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Parent Film",
+        "visible": 1,
+        "section_role": "parent",
+        "sectiontype": "sub",
+        "coursefullname": "2022-Moral Science",
+        "courseshortname": "2022-MoralScience",
+        "sectioncompletion": false,
+        "summary": "",
+        "summaryformat": 1,
+        "section": 6,
+        "hiddenbynumsections": 0,
+        "uservisible": true,
+        "modules": [
+            {
+                "id": 58,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=58",
+                "name": "BFF-Fun Questions",
+                "instance": "10",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": ""
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "timeopen": "1672144680",
+                "timeclose": "1674823080",
+                "complitionstatus": "Not Completed",
+                "attempts": 0,
+                "lastaccess": null,
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 59,
+                "url": "https://lxl-stg-lms.ken42.com/mod/quiz/view.php?id=59",
+                "name": "BFF-Action Time",
+                "instance": "11",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Fun activity"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Quizzes",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "timeopen": "1672145220",
+                "timeclose": "1674823620",
+                "complitionstatus": "Not Completed",
+                "attempts": 0,
+                "lastaccess": null,
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "quiz",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                }
+            },
+            {
+                "id": 60,
+                "url": "https://lxl-stg-lms.ken42.com/mod/resource/view.php?id=60",
+                "name": "Facilitator Manual - Best Friends Forever",
+                "description": "",
+                "instance": "5",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": ""
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "Files",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"a:1:{s:10:\\\"printintro\\\";i:1;}\"",
+                "noviewlink": false,
+                "completion": 1,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "resource",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [
+                    {
+                        "type": "file",
+                        "filename": "Parents Work Sheets Class 10 Best Friends Forever.pdf",
+                        "filepath": "/",
+                        "filesize": 646152,
+                        "fileurl": "https://lxl-stg-lms.ken42.com/webservice/pluginfile.php/106/mod_resource/content/1/Parents%20Work%20Sheets%20Class%2010%20Best%20Friends%20Forever.pdf?forcedownload=1",
+                        "timecreated": 1672145863,
+                        "timemodified": 1672145871,
+                        "sortorder": 1,
+                        "mimetype": "application/pdf",
+                        "isexternalfile": false,
+                        "userid": 2,
+                        "author": "Ken42 Admin",
+                        "license": "unknown"
+                    }
+                ],
+                "contentsinfo": {
+                    "filescount": 1,
+                    "filessize": 646152,
+                    "lastmodified": 1672145871,
+                    "mimetypes": [
+                        "application/pdf"
+                    ],
+                    "repositorytype": ""
+                }
+            },
+            {
+                "id": 57,
+                "url": "https://lxl-stg-lms.ken42.com/mod/url/view.php?id=57",
+                "name": "BFF-Film Link",
+                "description": "",
+                "instance": "6",
+                "metadatainfo": [
+                    {
+                        "field": "activitytype",
+                        "data": "Film"
+                    }
+                ],
+                "programname": "Miscellaneous",
+                "term": "2022-Class 3",
+                "modplural": "URLs",
+                "indent": 0,
+                "onclick": "",
+                "afterlink": null,
+                "customdata": "\"\"",
+                "noviewlink": false,
+                "completion": 2,
+                "completionstate": false,
+                "complitionstatus": "Not Completed",
+                "publish": 1,
+                "uservisible": true,
+                "visibleoncoursepage": 1,
+                "modname": "url",
+                "completiondata": {
+                    "state": 0,
+                    "timecompleted": 0,
+                    "overrideby": null,
+                    "valueused": false
+                },
+                "contents": [],
+                "contentsinfo": {
+                    "filescount": 0,
+                    "filessize": 0,
+                    "lastmodified": 0,
+                    "mimetypes": []
+                }
+            }
+        ]
+    }
+]
