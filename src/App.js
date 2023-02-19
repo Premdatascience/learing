@@ -40,9 +40,9 @@ import ViewFormval from "./FormVal/ViewFormval";
 import ViewformDatatable from "./FormVal/ViewformDatatable";
 import { ProtectedRoute, PublicdRoute } from "./Auth/ProtectedRoute.js";
 import FormValEdit from "./FormVal/FomValEdit";
-import ReduxConcepts from "./ReduxConcepts/ReduxConcepts";
 import Contexthook from "./Contexthook/Contexthook";
-import Reduxapp from "./ReduxConcepts/Reduxapp";
+import Reduxindex from "./ReduxConcepts/Reduxindex";
+import Reduxcrudindex from "./ReduxConcepts/reduxcrud/Reduxcrudindex";
 function App() {
   return (
     <>
@@ -98,8 +98,11 @@ function App() {
             <Route path="/Contexthook" element={<Contexthook/>} />
            
             {/* reduxconcepts */}
-            <Route path="/redux" element={<ReduxConcepts />} />
-            {/* <Route path="/redux" element={<Reduxapp />} /> */}
+
+            <Route path="/redux" element={<Reduxindex />} />
+
+           
+            <Route path="/reduxindex" element={<Reduxcrudindex />} />
 
 
           </Route>
