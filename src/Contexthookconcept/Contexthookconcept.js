@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../Home';
 import Compound1 from './compound1';
 import Mycontext from './Mycontext';
-const Contexthook = () => {
+const Contexthookconcept = () => {
   return (
 
 <>
@@ -18,4 +18,4 @@ const Contexthook = () => {
     )
 }
 
-export default Contexthook;
+export default Contexthookconcept;
