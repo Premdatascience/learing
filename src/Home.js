@@ -7,10 +7,7 @@ const Home = () => {
   const getToken = localStorage.getItem("token");
   // console.log(getToken);
   var decoded = jwt_decode(getToken);
-
-  // console.log(decoded.name);
- 
-  const Roleid = decoded.name
+  const Roleid = localStorage.getItem("Roleid");
 
   const logout = () => {
     localStorage.clear(getToken);
@@ -47,20 +44,20 @@ const Home = () => {
                 </li>
                 <li className="nav-item">
                 
-                {Roleid==="admin"?  <a className="nav-link" href="#">
+                {Roleid===0?  <a className="nav-link" href="#">
              
                     <Link to="/viewform">Form Registertion</Link>
                   </a>:<div></div>}
                 </li>
                 <li className="nav-item">
-                {Roleid==="admin"?
+                {Roleid===0?
                   <a className="nav-link" href="#">
                  
                     <Link to="/viewfileupload">Fileupload</Link>
                   </a>:<div></div>}
                 </li>
                 <li className="nav-item">
-                {Roleid==="admin"?
+                {Roleid===0?
                   <a className="nav-link" href="#">
                     {" "}
                     <Link to="/testformdata">Formtable</Link>

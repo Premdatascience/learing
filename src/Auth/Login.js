@@ -18,7 +18,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="/">
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -34,7 +34,6 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    debugger
     const inputdata = new FormData(e.currentTarget);
     // console.log({
     //   email: inputdata.get('email'),
@@ -56,6 +55,8 @@ const Login = () => {
 
     if (data.status == "ok") {
       localStorage.setItem("token", data.token);
+      localStorage.setItem("Roleid", data.role);
+
       alert('Login successful')
 
       navigate("/");

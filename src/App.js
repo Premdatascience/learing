@@ -43,6 +43,7 @@ import FormValEdit from "./FormVal/FomValEdit";
 // import Contexthookconcept from "./Contexthookconcept/Contexthook";
 import Reduxindex from "./ReduxConcepts/Reduxindex";
 import Reduxcrudindex from "./ReduxConcepts/reduxcrud/Reduxcrudindex";
+import SideNavebar from "./Sidenavebar/SideNavebar";
 function App() {
   return (
     <>
@@ -55,6 +56,8 @@ function App() {
           {/* AUTH registration&login */}
           <Route element={<ProtectedRoute />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/navebar" element={<Home />} />
+            <Route path="/SideNavebar" element={<SideNavebar />} />
 
             {/* formvalidation  */}
 
@@ -69,7 +72,6 @@ function App() {
 
             {/* Home */}
 
-            <Route path="/navebar" element={<Home />} />
             <Route path="/viewform" element={<Formview />} />
             <Route path="/viewfileupload" element={<ViewFileuploads />} />
 

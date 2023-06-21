@@ -3,10 +3,9 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 import { CSVLink } from "react-csv";
 import Home from "../Home";
-
+import moment from "moment/moment";
 
 const ViewFileuploads = (props) => {
   const [data, setData] = useState([]);
@@ -30,7 +29,7 @@ const ViewFileuploads = (props) => {
     getData();
   };
 
- 
+ const backendingview="http://localhost:4000"
 
   return (
     <>
@@ -77,9 +76,10 @@ const ViewFileuploads = (props) => {
                 {data.map((fileupload, index) => (
                   <tr key={fileupload.id}>
                     <td>{index + 1}</td>
-                    <td>{fileupload.photo}</td>
+                    <td><a href={backendingview/fileupload.file} target="_blank">{fileupload.filename}</a></td>
+
                     <td>{fileupload.name}</td>
-                    <td>{fileupload.birthdate}</td>
+                    <td>{moment.utc(fileupload.birthdate).format("MMM Do, YYYY")}</td>
                     
                     <td>
                       {/* <Link to={`/editform/${fileupload._id}`} className="btn btn-info">

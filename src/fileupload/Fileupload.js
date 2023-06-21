@@ -1,57 +1,46 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from "axios";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ViewFileuploads from './ViewFileupload';
 
 
 
 const Fileupload = () => {
+    const [fileupload, setFileupload] = useState();
+    const [filename, setFileuploadName] = useState();
+    const [name, setName] = useState();
+    const [birthdate, setBirthdate] = useState();
 
-
-    const [newUser, setNewUser] = useState(
-        {
-            photo: '',
-            name: '',
-
-
-            birthdate: '',
-        }
-    );
+    // console.log(fileupload.split(",")[1], "newUser");
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+
         const formData = new FormData();
 
-        formData.append('file', newUser.photo);
-        formData.append('name', newUser.name);
+        formData.append('file', fileupload);
+        formData.append('name', name);
+        formData.append('filename', filename);
 
-        formData.append('birthdate', newUser.birthdate);
+        formData.append('birthdate', birthdate);
 
         axios.post('http://localhost:4000/fileupload', formData)
             .then(res => {
+                debugger
+
                 console.log(res);
-               window.location.href = "/viewfileupload";
+                window.location.href = "/viewfileupload";
             })
             .catch(err => {
                 console.log(err);
-                
+
             });
         // console.log(formData);
     }
 
 
-    const handlePhoto = (e) => {
-        setNewUser({ ...newUser, photo: e.target.files[0] });
-    }
-
-    const handleChange = (e) => {
-        setNewUser({ ...newUser, [e.target.name]: e.target.value });
-    }
-
-    // const handleDate = (e) => {
-    //     setNewUser({ ...newUser, [e.target.date]: e.target.value });
-    // }
 
 
     return (
@@ -70,9 +59,14 @@ const Fileupload = () => {
                                         <label for="exampleInputEmail1" className="form-label">Fileupload</label>
                                         <input
                                             type="file"
-                                            accept=".png, .jpg, .jpeg"
-                                            name="photo"
-                                            onChange={handlePhoto}
+                                            name="fileupload"
+                                            placeholder="Upload"
+                                            multiple={true}
+                                            accept=".png, .jpg, .jpeg, .pdf"
+                                            onChange={(e) => {
+                                                setFileupload(e.target.files[0])
+                                                setFileuploadName(e.target.files[0]?.name);
+                                            }}
                                         />
 
                                     </div>
@@ -82,8 +76,9 @@ const Fileupload = () => {
                                             type="text"
                                             placeholder="name"
                                             name="name"
-                                            value={newUser.name}
-                                            onChange={handleChange}
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
+
                                         />
 
                                     </div>
@@ -92,8 +87,9 @@ const Fileupload = () => {
                                         <input
                                             type="date"
                                             name="birthdate"
-                                            value={newUser.date}
-                                            onChange={handleChange}
+                                            value={birthdate}
+                                            onChange={(e) => setBirthdate(e.target.value)}
+
                                         />
 
                                     </div>
