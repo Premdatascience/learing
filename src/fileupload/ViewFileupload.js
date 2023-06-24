@@ -6,10 +6,8 @@ import { Link } from "react-router-dom";
 import { CSVLink } from "react-csv";
 import Home from "../Home";
 import moment from "moment/moment";
-
 const ViewFileuploads = (props) => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
     getData();
   }, []);
@@ -29,7 +27,7 @@ const ViewFileuploads = (props) => {
     getData();
   };
 
- const backendingview="http://localhost:4000"
+ const backendingview="http://localhost:4000/"
 
   return (
     <>
@@ -76,7 +74,9 @@ const ViewFileuploads = (props) => {
                 {data.map((fileupload, index) => (
                   <tr key={fileupload.id}>
                     <td>{index + 1}</td>
-                    <td><a href={backendingview/fileupload.file} target="_blank">{fileupload.filename}</a></td>
+                    {/* <td><a href={backendingview/} target="_blank">{fileupload.filename}</a></td> */}
+                    <td><img style={{height:"50px"}}src={backendingview+fileupload.file}/></td>
+
 
                     <td>{fileupload.name}</td>
                     <td>{moment.utc(fileupload.birthdate).format("MMM Do, YYYY")}</td>
