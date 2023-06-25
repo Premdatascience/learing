@@ -21,9 +21,7 @@ import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
-import { useNavigate } from "react-router-dom";
 import HomePage from "../HomePage";
-
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -96,13 +94,10 @@ export default function SideNavebar() {
   const [open, setOpen] = React.useState(false);
   const [menuItem, setMenuItem] = React.useState([]);
   const Roleid = localStorage.getItem("Roleid");
-  const navigate = useNavigate();
-
   //select
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   const handleListItemClick = (event, index) => {
-    // setSelectedIndex(index);
-    navigate('/')
+    setSelectedIndex(index);
   };
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -133,6 +128,55 @@ export default function SideNavebar() {
 
   //     return setMenuItem(profileArr);
   // }, []);
+
+  const Admin = () => {
+    return (
+      <>
+        <List component="nav" aria-label="main mailbox folders">
+          <ListItemButton
+            selected={selectedIndex === 0}
+            onClick={(event) => handleListItemClick(event, 0)}
+          >
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Inbox" />
+          </ListItemButton>
+          <ListItemButton
+            selected={selectedIndex === 1}
+            onClick={(event) => handleListItemClick(event, 1)}
+          >
+            <ListItemIcon>
+              <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Drafts" />
+          </ListItemButton>
+        </List>
+        <Divider />
+      </>
+    );
+  };
+  const User = () => {
+    return (
+      <>
+        <List component="nav" aria-label="secondary mailbox folder">
+          <ListItemButton
+            selected={selectedIndex === 2}
+            onClick={(event) => handleListItemClick(event, 2)}
+          >
+            <ListItemText primary="Trash" />
+          </ListItemButton>
+          <ListItemButton
+            selected={selectedIndex === 3}
+            onClick={(event) => handleListItemClick(event, 3)}
+          >
+            <ListItemText primary="Spam" />
+          </ListItemButton>
+        </List>
+        <Divider />
+      </>
+    );
+  };
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -167,30 +211,12 @@ export default function SideNavebar() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List component="nav" aria-label="main mailbox folders">
-          <ListItemButton
-            onClick={() => handleListItemClick()}
-          >
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary="Inbox" />
-          </ListItemButton>
-          <ListItemButton
-            // selected={selectedIndex === 1}
-            // onClick={(event) => handleListItemClick(event, 1)}
-          >
-            <ListItemIcon>
-              <DraftsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Drafts" />
-          </ListItemButton>
-        </List>
-        <Divider />
+        {Roleid === "0" && Admin()}
+        {Roleid === "1" && User()}
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        {/* <DrawerHeader /> */}
-      {/* <HomePage /> */}
+        <DrawerHeader />
+        <HomePage />
       </Box>
     </Box>
   );
