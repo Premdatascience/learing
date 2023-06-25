@@ -1,13 +1,14 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import jwt_decode from "jwt-decode";
+// import jwt_decode from "jwt-decode";
 
 const Home = () => {
   const getToken = localStorage.getItem("token");
   // console.log(getToken);
-  var decoded = jwt_decode(getToken);
+  // var decoded = jwt_decode(getToken);
   const Roleid = localStorage.getItem("Roleid");
+  console.log(Roleid,"sdsds");
 
   const logout = () => {
     localStorage.clear(getToken);
@@ -44,20 +45,20 @@ const Home = () => {
                 </li>
                 <li className="nav-item">
                 
-                {Roleid===0?  <a className="nav-link" href="#">
+                {Roleid==="0"?  <a className="nav-link" href="#">
              
                     <Link to="/viewform">Form Registertion</Link>
                   </a>:<div></div>}
                 </li>
                 <li className="nav-item">
-                {Roleid===0?
+                {Roleid==="0"?
                   <a className="nav-link" href="#">
                  
                     <Link to="/viewfileupload">Fileupload</Link>
                   </a>:<div></div>}
                 </li>
                 <li className="nav-item">
-                {Roleid===0?
+                {Roleid==="0"?
                   <a className="nav-link" href="#">
                     {" "}
                     <Link to="/testformdata">Formtable</Link>
