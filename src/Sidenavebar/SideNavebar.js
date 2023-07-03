@@ -89,7 +89,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function SideNavebar() {
+export default function SideNavebar({children}) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [menuItem, setMenuItem] = React.useState([]);
@@ -216,7 +216,9 @@ export default function SideNavebar() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <HomePage />
+        {/* <HomePage /> */}
+        <Box position={"relative"}>{children}</Box>
+
       </Box>
     </Box>
   );

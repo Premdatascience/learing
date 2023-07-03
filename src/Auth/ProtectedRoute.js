@@ -1,12 +1,12 @@
 import React from "react";
 import { Navigate, Outlet } from 'react-router-dom'
-
+import SideNavebar from "../Sidenavebar/SideNavebar";
 const ProtectedRoute = () => {
 
  
     let auth =localStorage.getItem("token")
   return (
-      auth ? <Outlet/> : <Navigate to='/login'/>
+      auth ? <SideNavebar><Outlet/></SideNavebar> : <Navigate to='/login'/>
     )
 }
 

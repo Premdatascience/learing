@@ -13,6 +13,7 @@ const Fileupload = () => {
     const [birthdate, setBirthdate] = useState();
 
     // console.log(fileupload.split(",")[1], "newUser");
+    console.log(fileupload,"fileuploadfileupload");
 
     const handleSubmit = (e) => {
         e.preventDefault();
